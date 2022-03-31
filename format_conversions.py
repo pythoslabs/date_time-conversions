@@ -21,6 +21,8 @@ out : '200207'  ( str )
 def get_yyyymm_format(str_date):
     yyyy = str_date.split('-')[2]
     mm =  str_date.split('-')[1]
-    return yyyymm 
+    dt_new_format = yyyy + mm
+    return dt_new_format 
 
-
+# Hint : Incase you want to use it in a dataframe of many rows , use apply function like shown below 
+# df_SO['yyyymm'] = df_SO['Month Starting'].apply(lambda x : get_yyyymm_format(x))
